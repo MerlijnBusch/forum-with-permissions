@@ -16,12 +16,15 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <body>
+<div class="body-container">
+    @include('layouts.nav')
 
-@include('layouts.nav')
+    <main class="main-content">
+        @yield('content')
+    </main>
 
-@yield('content')
-
-@include('layouts.footer')
+    @include('layouts.footer')
+</div>
 
 
 <!-- Scripts -->

@@ -3,3 +3,14 @@ html, body {
     padding: 0;
     height: 100%;
 }
+
+.body-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+}
