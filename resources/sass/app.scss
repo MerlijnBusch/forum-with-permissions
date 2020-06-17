@@ -3,9 +3,12 @@
 
 // Variables
 @import 'variables';
-
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import "global";
 
 // files
-@import "layouts/layouts";
+@import "layouts/nav";
+@import "layouts/main";
+@import "layouts/footer";
+
+//elements
+@import "elements/btn";

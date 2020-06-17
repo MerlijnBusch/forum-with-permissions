@@ -1,0 +1,22 @@
+.nav-container {
+    padding: 0 24px;
+    height: 60px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.25);
+}
+
+.nav-action-container {
+    display: flex;
+    align-items: center;
+}
+
+#logout-form-nav {
+    display: none;
+}
