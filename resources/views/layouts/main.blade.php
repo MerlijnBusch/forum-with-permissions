@@ -20,7 +20,9 @@
     @include('layouts.nav')
 
     <main class="main-content">
+        <div class="main-content-force-width">
         @yield('content')
+        </div>
     </main>
 
     @include('layouts.footer')

@@ -1,19 +1,37 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+@import url(https://fonts.googleapis.com/css?family=Nunito);.home-category {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
-.body-container {
+.home-category-main {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  flex: 1;
 }
 
-.main-content {
+.home-category-post-container {
   display: flex;
-  flex: 1;
+  flex-direction: row;
+}
+
+.home-category-post-category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-category-post-view-action {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.home-category-side-nav {
+  background: red;
+  width: 250px;
+  height: 500px;
 }
 
 .nav-container {
@@ -37,6 +55,29 @@ body {
 
 #logout-form-nav {
   display: none;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.main-content-force-width {
+  max-width: 1020px;
 }
 
 .btn {

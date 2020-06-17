@@ -1,0 +1,88 @@
+.home-category {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.home-category-main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.home-category-post-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.home-category-post {
+
+}
+
+.home-category-post-votes {
+
+}
+
+.home-category-post-chevron-up {
+
+}
+
+.home-category-post-amount {
+
+}
+
+.home-category-post-chevron-down {
+
+}
+
+.home-category-post-category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-category-post-category-join {
+
+}
+
+.home-category-post-category-name {
+
+}
+
+.home-category-post-view {
+}
+
+.home-category-post-view-action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.home-category-post-view-body {
+}
+
+.home-category-post-view-comments {
+}
+
+.home-category-post-view-hide {
+}
+
+.home-category-post-view-report {
+}
+
+.home-category-post-view-save {
+}
+
+.home-category-post-view-share {
+}
+
+.home-category-post-view-report {
+
+}
+
+.home-category-side-nav {
+    background: red;
+    width: 250px;
+    height: 500px;
+}
