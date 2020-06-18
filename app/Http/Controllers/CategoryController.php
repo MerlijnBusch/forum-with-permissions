@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\CategoryRoles;
 use App\Http\Requests\CategoryStoreRequest;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 
 class CategoryController extends Controller
@@ -36,12 +39,12 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Category  $category
-     * @return Response
+     * @param Category $category
+     * @return void
      */
     public function show(Category $category)
     {
-        dd($category);
+        dd($category, $category->categoryroles, $category->categoryroles[0]->user);
     }
 
     /**
@@ -55,6 +58,32 @@ class CategoryController extends Controller
         $data = $request->validated();
         Category::create($data);
 
+        $category = Category::query()
+            ->where('name', $data['name'])
+            ->first();
+
+        $role = new CategoryRoles;
+        $role->role_name = 'user';
+        $role->category_id = $category->id;
+        $role->permissions = json_encode([]);
+        $role->save();
+
+        $role = new CategoryRoles;
+        $role->role_name = 'Admin';
+        $role->category_id = $category->id;
+        $role->permissions = json_encode([]);
+        $role->save();
+
+        $categoryRole = CategoryRoles::query()
+            ->where('category_id', $category->id)
+            ->where('role_name', 'Admin')
+            ->first();
+
+        DB::table('user_category_role')->insert([
+           'user_id' => Auth::id(),
+           'category_role_id' => $categoryRole->id,
+        ]);
+
         return redirect()
             ->route('category.show', ['category' => $data['name']])
             ->withSuccess(['Created category']);
@@ -63,7 +92,7 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Category  $category
+     * @param Category $category
      * @return Response
      */
     public function edit(Category $category)
@@ -75,7 +104,7 @@ class CategoryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Category  $category
+     * @param Category $category
      * @return Response
      */
     public function update(Request $request, Category $category)
@@ -86,7 +115,7 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Category  $category
+     * @param Category $category
      * @return Response
      */
     public function destroy(Category $category)

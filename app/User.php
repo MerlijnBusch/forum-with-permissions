@@ -42,4 +42,9 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
         'role_id' => 'integer'
     ];
+
+    public function categoryroles()
+    {
+        return $this->belongsToMany('App\CategoryRoles', 'user_category_role', 'category_role_id', 'user_id');
+    }
 }

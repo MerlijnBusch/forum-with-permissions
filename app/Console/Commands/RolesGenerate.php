@@ -45,8 +45,6 @@ class RolesGenerate extends Command
         $role = new Role;
         $role->id = 1;
         $role->role_name = 'Admin';
-        $role->color = '#a0a867';
-        $role->selectable = false;
         $role->permissions = json_encode([
             Permissions::__ADMIN__
         ]);
@@ -55,8 +53,6 @@ class RolesGenerate extends Command
         $role = new Role;
         $role->id = 2;
         $role->role_name = 'user';
-        $role->color = '#a0a867';
-        $role->selectable = true;
         $role->permissions = json_encode([]);
         $role->save();
 

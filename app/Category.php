@@ -21,4 +21,9 @@ class Category extends Model
     public function getRouteKeyName() {
         return 'name';
     }
+
+    public function categoryroles()
+    {
+        return $this->hasMany('App\CategoryRoles');
+    }
 }
