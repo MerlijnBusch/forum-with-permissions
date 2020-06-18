@@ -1,8 +1,5 @@
-.btn {
-    border: none;
+.base-btn {
     font-weight: normal;
-    color: #fff;
-    background: #42b983;
     display: inline-block;
     margin: 0 4px;
     padding: 6px 12px;
@@ -12,7 +9,13 @@
     box-sizing: border-box;
     min-height: 30px;
     text-decoration: none;
+}
 
+.btn {
+    @extend .base-btn;
+    border: none;
+    color: #fff;
+    background: #42b983;
     .d-icon {
         transition: color 0.25s;
     }
@@ -41,4 +44,31 @@
 
 .btn:hover {
     background: #359469;
+}
+
+.btn-outline {
+    @extend .base-btn;
+    border: 1px solid #6c757d;
+    color: #42b983;
+    background: transparent none;
+    .d-icon {
+        transition: color 0.25s;
+    }
+    &:active,
+    &.btn-active {
+        text-shadow: none;
+    }
+    &[disabled],
+    &.disabled {
+        cursor: default;
+        opacity: 0.4;
+    }
+    .fa {
+        margin-right: 7px;
+    }
+    &.no-text {
+        .fa {
+            margin-right: 0;
+        }
+    }
 }

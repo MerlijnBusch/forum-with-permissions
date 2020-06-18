@@ -4,7 +4,7 @@
     <div class="home-category">
         <div class="home-category-main">
             <div> regulair post:</div>
-            <div>
+            <div class="home-category-actions card">
                 <div>Hot</div>
                 <div>New</div>
                 <div>Top</div>
@@ -14,16 +14,20 @@
                 </div>
             </div>
 
-            <div class="home-category-post-container">
+            <div class="home-category-post-container card">
                 <div class="home-category-post-votes">
                     <div class="home-category-post-chevron-up">
-                        arrow up
+                        <span class="material-icons">
+                            arrow_upward
+                        </span>
                     </div>
                     <div class="home-category-post-amount">
                         51.8k
                     </div>
                     <div class="home-category-post-chevron-down">
-                        arrow down
+                        <span class="material-icons">
+                            arrow_downward
+                        </span>
                     </div>
                 </div>
                 <div class="home-category-post">
@@ -31,8 +35,8 @@
                         <div class="home-category-post-category-name">
                             name category then some user name
                         </div>
-                        <div class="home-category-post-category-join">
-                            join category
+                        <div class="home-category-post-category-join btn-outline">
+                            Join
                         </div>
                     </div>
                     <div class="home-category-post-view">

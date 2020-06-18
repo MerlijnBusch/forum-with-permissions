@@ -10,6 +10,14 @@
     flex: 1;
 }
 
+.home-category-actions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 25px;
+    padding: 4px;
+}
+
 .home-category-post-container {
     display: flex;
     flex-direction: row;
@@ -20,19 +28,28 @@
 }
 
 .home-category-post-votes {
-
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 4px;
 }
 
 .home-category-post-chevron-up {
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .home-category-post-amount {
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .home-category-post-chevron-down {
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .home-category-post-category {
