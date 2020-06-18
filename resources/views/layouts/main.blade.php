@@ -18,6 +18,9 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <body>
 <div class="body-container">
+    @include('partials.handlers.success')
+    @include('partials.handlers.error')
+
     @include('layouts.nav')
 
     <main class="main-content">

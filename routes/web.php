@@ -20,4 +20,7 @@ Auth::routes(['verify' => true]);
 
 Route::group(['middleware' => ['auth','verified']], function () {
 //    Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/category/create', 'CategoryController@index')->name('category.create');
+    Route::post('/category', 'CategoryController@store')->name('category.store');
+    Route::get('/category/{category}', 'CategoryController@show')->name('category.show');
 });

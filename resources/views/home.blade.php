@@ -80,7 +80,9 @@
         </div>
 
         <div class="home-category-side-nav">
-
+            <div>
+                <a href="{{route('category.create')}}">Create new category</a>
+            </div>
         </div>
     </div>
 @endsection

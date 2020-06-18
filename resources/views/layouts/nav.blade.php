@@ -11,7 +11,11 @@
                 <a class="btn"
                    href="{{ route('register') }}">{{ __('Register') }}</a>
             @endif
-        @else
+        @endguest
+
+        <div>search</div>
+        <div>hambuger icon</div>
+        @auth
             <a class="btn"
                href="{{ route('logout') }}"
                onclick="event.preventDefault(); document.getElementById('logout-form-nav').submit();">
@@ -20,11 +24,10 @@
 
             <form id="logout-form-nav"
                   action="{{ route('logout') }}"
-                  method="POST>
+                  method="POST">
+                @method('POST')
                 @csrf
             </form>
-        @endguest
-        <div>search</div>
-        <div>hambuger icon</div>
+        @endauth
     </div>
 </nav>
