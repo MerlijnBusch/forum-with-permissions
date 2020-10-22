@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Role extends Model
 {
+    public const AdminRoleId = 1;
+    public const UserRoleId = 2;
     /**
      * The attributes that are mass assignable.
      *

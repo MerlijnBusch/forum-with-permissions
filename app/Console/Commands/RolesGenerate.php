@@ -43,7 +43,7 @@ class RolesGenerate extends Command
     public function handle()
     {
         $role = new Role;
-        $role->id = 1;
+        $role->id = Role::AdminRoleId;
         $role->role_name = 'Admin';
         $role->permissions = json_encode([
             Permissions::__ADMIN__
@@ -51,7 +51,7 @@ class RolesGenerate extends Command
         $role->save();
 
         $role = new Role;
-        $role->id = 2;
+        $role->id = Role::UserRoleId;
         $role->role_name = 'user';
         $role->permissions = json_encode([]);
         $role->save();

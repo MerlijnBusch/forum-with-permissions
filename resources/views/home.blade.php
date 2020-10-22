@@ -59,19 +59,19 @@
                         </div>
                     </div>
                     <div class="home-category-post-view-action">
-                        <div class="home-category-post-view-comments">
+                        <div class="home-category-post-view-comments home-category-post-view-action-margin">
                             395 comments
                         </div>
-                        <div class="home-category-post-view-share">
+                        <div class="home-category-post-view-share home-category-post-view-action-margin">
                             share
                         </div>
-                        <div class="home-category-post-view-save">
+                        <div class="home-category-post-view-save home-category-post-view-action-margin">
                             save
                         </div>
-                        <div class="home-category-post-view-hide">
+                        <div class="home-category-post-view-hide home-category-post-view-action-margin">
                             hide
                         </div>
-                        <div class="home-category-post-view-report">
+                        <div class="home-category-post-view-report home-category-post-view-action-margin">
                             report
                         </div>
                     </div>
